@@ -1,0 +1,194 @@
+/* BODY style */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  
+  /* Blueprint grid background pattern took from Verou. Link: https://projects.verou.me/css3patterns/ */
+  background-color:#269;
+  background-image: linear-gradient(white 2px, transparent 2px),
+                    linear-gradient(90deg, white 2px, transparent 2px),
+                    linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+/* BOX global design */
+.thebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2em auto;
+
+  width: 50em;
+  height: 50em;
+
+  -webkit-box-shadow: 5px 5px 30px 5px #fff;
+  -moz-box-shadow: 5px 5px 30px 5px #fff;
+  box-shadow: 5px 5px 30px 5px #fff;
+  background-color: #000;
+}
+
+/* INSIDE-THE-BOX design */
+.inside {
+  display: grid;
+  grid-template-rows: 20px repeat(8, 1fr) 50px;
+  grid-template-columns: repeat(8, 1fr) 50px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #000;
+}
+
+/* RECTANGLE global design */
+.rectangle {
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.rectangle > div {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin: auto;
+
+  width: 50%;
+  height: 100%;
+
+  color: #dcbc3c;
+}
+.rectangle:hover {
+  background-color: #036;
+  border: 5px dashed #dcbc3c;
+}
+
+/* RECTANGLE specific design */
+.rectangle1 {
+  background-color: #c6c6c9;
+}
+.rectangle2 {
+  grid-column: span 5;
+  background-color: #8c8c8c;
+}
+.rectangle3 {
+  grid-row: span 2;
+  grid-column: -1 / 7;
+  background-color: #c6c6c9;
+}
+.rectangle4 {
+  grid-row: span 4;
+  background-color: #c6c6c9;
+}
+.rectangle6 {
+  grid-column: span 4;
+  background-color: #162739;
+}
+.rectangle7 {
+  grid-column: span 3;
+  background-color: #8c8c8c;
+}
+.rectangle8 {
+  grid-column: span 2;
+  background-color: #a43317;
+}
+.rectangle9 {
+  grid-column: span 2;
+}
+.rectangle10 {
+  background-color: #162739;
+}
+.rectangle11 {
+  grid-row: span 2;
+}
+.rectangle12 {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: #dcbc3c;
+}
+.rectangle13 {
+  grid-row: span 3;
+  grid-column: span 2;
+  background-color: #162739;
+}
+.rectangle14 {
+  grid-row: span 3;
+  grid-column: span 2;
+  background-color: #a43317;
+}
+.rectangle15 {
+  grid-row: span 4;
+  background-color: #8c8c8c;
+}
+.rectangle16 {
+  grid-row: span 4;
+  background-color: #8c8c8c;
+}
+.rectangle17 {
+  grid-row: span 4;
+  background-color: #8c8c8c;
+}
+.rectangle18 {
+  grid-column: span 2;
+  background-color: #dcbc3c;
+}
+.rectangle19 {
+  grid-column: span 2;
+  background-color: #a43317;
+}
+.rectangle20 {
+  grid-column: span 2;
+  background-color: #c6c6c9;
+}
+.rectangle21 {
+  grid-column: span 2;
+  background-color: #dcbc3c;
+}
+.rectangle22 {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.rectangle23 {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: #8c8c8c;
+}
+.rectangle24 {
+  grid-row: span 2;
+  grid-column: span 2;
+  background-color: #162739;
+}
+.rectangle25 {
+  grid-row: span 3;
+  background-color: #a43317;
+}
+.rectangle26 {
+  grid-column: span 2;
+  background-color: #dcbc3c;
+}
+.rectangle27 {
+  grid-column: span 4;
+  background-color: #c6c6c9;
+}
+.rectangle28 {
+  grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .inside {
+    display: flex;
+    flex-direction: column;
+  }
+  .rectangle {
+    flex-grow: 1;
+    border: none;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+  }
+  .rectangle:hover {
+    background-color: #036;
+    border: 5px dashed #dcbc3c;
+  }
+}
